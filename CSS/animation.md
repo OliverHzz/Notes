@@ -134,9 +134,9 @@ ease-in-out ：{-webkit-animation-timing-function:cubic-bezier(0.42,0,0.58,1);}
 ##### position
 关键字。表示动画是从时间段的开头连续还是末尾连续。支持**start**和**end**两个关键字，含义分别如下：
 
-- **start**：表示直接开始。也就是时间才开始，就已经执行了一个距离段。于是，动画执行的5个分段点是下面这5个，起始点被忽略，因为时间一开始直接就到了第二个点：
+- **start**：表示直接开始。也就是时间才开始，就已经执行了一个距离段。于是，动画执行的5个分段点是下面这5个，起始点被忽略，因为==时间一开始直接就到了第二个点：==
 ![image](https://image.zhangxinxu.com/image/blog/201806/2018-06-11_223135.png)
-- **end**：表示戛然而止。也就是时间一结束，当前距离位移就停止。于是，动画执行的5个分段点是下面这5个，结束点被忽略，因为等要执行结束点的时候已经没时间了：
+- **end**：表示戛然而止。也就是时间一结束，当前距离位移就停止。于是，动画执行的5个分段点是下面这5个，==结束点被忽略==，因为等要执行结束点的时候已经没时间了：
 ![image](https://image.zhangxinxu.com/image/blog/201806/2018-06-11_223630.png)
 
 > step-start = steps(1, start) & step-end = steps(1, end)
@@ -146,9 +146,9 @@ ease-in-out ：{-webkit-animation-timing-function:cubic-bezier(0.42,0,0.58,1);}
 ```
 steps(2, start)
 @keyframes move {
-    0% { left: 0; }
-    50% { left: 50px; }
-    100% { left: 100px; }
+  0% { left: 0; }
+  50% { left: 50px; }
+  100% { left: 100px; }
 }
 ```
 
@@ -156,11 +156,11 @@ steps(2, start)
 steps(1, start)
 // 执行效果相同
 @keyframes move {
-    0% { left: 0; }
-    25% { left: 25px; }
-    50% { left: 50px; }
-    75% { left : 75px; }
-    100% { left: 100px; }
+  0% { left: 0; }
+  25% { left: 25px; }
+  50% { left: 50px; }
+  75% { left : 75px; }
+  100% { left: 100px; }
 }
 ```
 
